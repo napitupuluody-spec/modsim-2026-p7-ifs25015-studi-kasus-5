@@ -1,0 +1,56 @@
+### Health Check
+GET http://localhost:5000/api/health
+
+###
+
+### Generate Soal Pilihan Ganda
+POST http://localhost:5000/api/generate
+Content-Type: application/json
+
+{
+  "topic": "Rekursif dalam Python",
+  "difficulty": "medium",
+  "question_type": "multiple_choice",
+  "num_questions": 3
+}
+
+###
+
+### Generate Soal Benar/Salah
+POST http://localhost:5000/api/generate
+Content-Type: application/json
+
+{
+  "topic": "Konsep OOP dalam Java",
+  "difficulty": "easy",
+  "question_type": "true_false",
+  "num_questions": 3
+}
+
+###
+
+### Generate Soal Esai
+POST http://localhost:5000/api/generate
+Content-Type: application/json
+
+{
+  "topic": "Algoritma Dijkstra",
+  "difficulty": "hard",
+  "question_type": "essay",
+  "num_questions": 2
+}
+
+###
+
+### Ambil Riwayat
+GET http://localhost:5000/api/history?limit=10
+
+###
+
+### Ambil Detail Record (ganti ID sesuai hasil)
+GET http://localhost:5000/api/history/1
+
+###
+
+### Lihat Log Permintaan
+GET http://localhost:5000/api/logs?limit=20
